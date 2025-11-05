@@ -1,4 +1,4 @@
-export const PlaySvg = ({ className }) => {
+export const PlaySvg = ({ className }: { className: string }) => {
   return (
     <svg
       className={className}

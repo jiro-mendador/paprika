@@ -4,8 +4,13 @@ import NavigationBar from "../components/NavigationBar";
 import { CircleSvg } from "../assets/CircleSvg";
 import { PlaySvg } from "../assets/PlaySvg";
 
+type Music = {
+  title: string;
+  music: string;
+};
+
 const Home = () => {
-  const listOfMusics = [
+  const listOfMusics: Music[] = [
     {
       title: "1man2cupBT",
       music: "1man2cupBT.wav",
@@ -41,10 +46,10 @@ const Home = () => {
     },
   ];
 
-  const [musicPlaying, setMusicPlaying] = useState(null);
-  const audioRef = useRef(null);
+  const [musicPlaying, setMusicPlaying] = useState<Music | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const onButtonClick = (music) => {
+  const onButtonClick = (music: Music) => {
     let isSameMusic = false;
     if (musicPlaying) {
       isSameMusic = musicPlaying?.title === music.title;

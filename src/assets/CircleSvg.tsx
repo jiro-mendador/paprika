@@ -1,4 +1,4 @@
-export const CircleSvg = ({ className }) => {
+export const CircleSvg = ({ className }: { className: string }) => {
   return (
     <svg
       className={className}
