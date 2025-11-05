@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
+import { MusicSvg } from "../assets/MusicSvg";
+import FadeIn from "./FadeIn";
 
 const NavigationBar = () => {
   return (
     <>
-      <nav className="w-full bg-black text-white p-4 flex justify-end gap-2">
-        <Link to="/">Home</Link>
-        <Link to="/second-page">Second Page</Link>
+      <nav className="flex flex-col justify-center items-center bg-black text-white p-4 rounded-4xl m-6 z-20">
+        <Link to="/">
+          <FadeIn>
+            <MusicSvg />
+          </FadeIn>
+        </Link>
       </nav>
     </>
   );
