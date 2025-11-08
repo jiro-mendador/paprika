@@ -3,7 +3,7 @@ export const MusicSvg = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
-      className="w-10 h-10 stroke-black fill-none stroke-[2px]"
+      className="w-10 h-8 stroke-black fill-none stroke-[2px] animate-spin"
     >
       {/* Left Group */}
       <g>
